@@ -115,15 +115,6 @@ FES-5-Project-TEAM-6
 - **라우팅**: `/api/*` 요청은 Vercel → EC2 프록시 → 외부 API  
 - **헬스체크**: `/healthz` (EC2)
 
-```mermaid
-flowchart LR
-  A[Browser] -->|/api/*| B[Vercel (SPA + Rewrites)]
-  A <-->|HTML/CSS/JS| B
-  B -->|rewrite/proxy| C[EC2 (Nginx → Node Proxy)]
-  C --> D[data4library OpenAPI]
-  C --> E[Supabase<br/>DB · Auth · Storage]
-
-  ```
 ---
 
 ## ⚙️ 기술 스택  
